@@ -2,25 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <!-- # "Viewport" indica que vamos a trabajar con la herramienta "meta" de la pantalla de visualización, en este caso vamos a utilizar el atributo 
-     "content" para definir el ancho por defecto del dispositivo que visualiza la pagina, esto es bastante útil ya que nos permite una correcta visualización 
-     es dispositivos moviles. adicionalmente "initial-scale" nos va servir para definir un zoom inicial de 1 (O lo que es lo mismo, "Sin zoom")-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="robots" content="index, follow">
+    <meta name="description" content="Esta es una descripción de la pagina">
 
-    <!-- Definimos el titulo de la página Web -->
-    <title>NeTenebrae | Mi Blog Personal</title>
-    <!-- #Definir el Favicon-->    
+    <title>Aprendiendo HMTL | NeTenebrae</title>  
+
     <link rel="icon" type="image" href="../../../Recursos/Marca/Untitled.png"> 
-    <meta name="description">
+
 </head>
 <body>
 
     <header>
         <h1>Aprendiendo HTML con NeTenebrae</h1>
         <img src="../../../Recursos/Marca/Notion Background.png" alt="Background de Notion">
-        <hr>
+    <hr>
         <nav>
             <ul>
                 <li><a href="#Aprendizaje">¿Que aprenderemos en este archivo?.</a></li>
@@ -28,7 +24,6 @@
                 <li><a href="#Contactame">Sigueme para más contenido.</a></li>
             </ul>
         </nav>
-
     <hr>      
         <h2>Desarrollador - Estudiante FullStack en <a href="https://www.freecodecamp.org" target="_blank">freeCodecamp.org</a></h2>
         <p>
@@ -49,17 +44,61 @@
     <hr>
     <section id="Aprendizaje">
         <h2>¿Que estámos aprendiendo con este proyecto?</h2>
-            <ul>
+            <ol>
                 <li><a href="./Estructura de HTML.HTML">Estrucutra de HTML</a></li>
                 <li>Segmentación correcta</li>
                 <li>Inputs</li>
                 <li>Tablas</li>
                 <li>Multimedia</li>
                 <li>Formularios</li>
-            </ul>
+            </ol>
     </section>
     <hr>
     <section id="Herramientas">
+        <table>
+            <caption><b>Ruta de Aprendizaje</b></caption>
+            <thead>
+                <tr>
+                    <th>Código de Producto</th>
+                    <th>Nombre del Producto</th>
+                    <th>Precio Unitario</th>
+                    <th>Stock Disponible</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>P001</td>
+                    <td>Laptop Ultra</td>
+                    <td>$1200</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>P002</td>
+                    <td>Teclado Mecánico</td>
+                    <td>$75</td>
+                    <td>120</td>
+                </tr>
+                <tr>
+                    <td>P003</td>
+                    <td>Monitor Curvo 27"</td>
+                    <td>$350</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>P004</td>
+                    <td>Ratón Inalámbrico</td>
+                    <td>$25</td>
+                    <td>200</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total de Tipos de Productos</td>
+                    <td>4</td>
+                </tr>
+            </tfoot>
+        </table>
+<hr>
         <h3>¿Que herramientas vamos a usar?</h3>
         <ol>
             <li>Editor de Codigo</li>
