@@ -1,1 +1,2 @@
-Qlq esto es una prueba xd
+Repositorio de ejemplo para pagina HTML. 
+Estudios en freeCodeCamp.org
