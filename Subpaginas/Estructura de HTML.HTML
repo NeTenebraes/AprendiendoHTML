@@ -11,31 +11,305 @@
     <link rel="icon" type="image" href="https://i.postimg.cc/VNfYDmf9/Profile-Picture.webp"> 
 
 </head>
-<body>
 
-        <header>
-        <h1>Estructura de HTML</h1>
-        <img src="https://i.postimg.cc/t904cH7N/Notion-Background.webp" alt="Background de Notion">
-    <hr>
+<body>
+    <header>
+        <h1>Aprendiendo HTML con NeTenebrae</h1>
+       <a href="../01.HTML"><img src="https://i.postimg.cc/t904cH7N/Notion-Background.webp" alt="Background de Notion"></a>
         <nav>
-            <h2><a href="../01.HTML">Menú Principal</a></h2>
             <ul>
-                <li><a href="../01.HTML">Página principal</a></li>
-                <li></li>
+                <li><a href="./Estructura de HTML.HTML">Que es HTML y su Estructura básica</a></li>
+                <li><a href=""></a></li>
+                <li><a href="">Tablas en HTML</a></li>
             </ul>
         </nav>
-    <hr>
-        
-        <h2>Desarrollador - Estudiante FullStack en <a href="https://www.freecodecamp.org" target="_blank">freeCodecamp.org</a></h2>
-        <p>
-            Mano la verda estoy es feliz de que estés acá aprendiendo junto a mi. Creeme que todo esto puede parecer un poco complicado al principio, sobretodo si nunca
-            haz manejado lineas de codigo antes. Pero mano, hay que hacerle, todo fresco mira que este lenguaje es muy sencillo de aprender y más con todas las facilidades que ofrece la actualidad.
-        </p>
     </header>
-   
+    <hr>
+    <main>
+        <section id="indice">
+            <h2>¿Que es HTML?</h2>
+            <p>
+                Te comparto todo lo que he aprendido a lo largo de mis días estudiando en <a href="https://www.freeCodeCamp.org" target="_blank">freeCodeCamp.org</a>. <br>
+                La estructura básica y fundamental de un documento HTML se compone de un conjunto de etiquetas anidadas que definen tanto la información general 
+                del documento como el contenido visible para el usuario. Piensa en ella como el "esqueleto" sobre el cual construyes toda tu página web.
+            </p>
+            <img src="https://i.postimg.cc/85qbMLxj/Skeleton.webp" alt="">
+            <hr>
+        <nav>
+            <h3>Indice</h3>
+            <ul>
+                <li><a href="#estructura-html">Estructura HTML</a></li>
+                <li><a href="#texto-html">Agregar Texto</a></li>
+                <li><a href="#quotes-html">Agregar Citas (Quotes)</a></li>
+                <li><a href="#subitems-html">Sub-ítems en Tablas</a></li>
+                <li><a href="#codigo-html">Visualizar Código</a></li>
+                <li><a href="#imprescindible-html">HTML Imprescindible</a></li>
+            </ul>
+        </nav>
+        </section>
+        <hr>    
+        <section id="estructura-html">
+            <h2></h2>
+            <p>Todo documento HTML comienza con un esqueleto básico para que el navegador lo interprete correctamente:</p>
+
+           <blockquote><pre><code>
+1 &lt;!DOCTYPE html&gt;
+2 &lt;html lang="es"&gt;
+3 &lt;head&gt;
+4     &lt;meta charset="UTF-8"&gt;
+5     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+6     &lt;title&gt;Título de mi Página&lt;/title&gt;
+7     &lt;!-- Enlace a CSS --&gt;
+8     &lt;link rel="stylesheet" href="estilos.css"&gt;
+9     &lt;!-- Enlace a JavaScript --&gt;
+10     &lt;script src="script.js" defer&gt;&lt;/script&gt;
+11 &lt;/head&gt;
+12 &lt;body&gt;
+13     &lt;!-- Aquí va el contenido visible --&gt;
+14 &lt;/body&gt;
+15 &lt;/html&gt;
+            </code></pre></blockquote>
+
+                <!-- te darás cuentasa que hay un montón de caracteres especiales como "&al;" y entre otro. 
+                 No te preocupes que más adelante explicamos en detalles estas secciones -->
+            <ul>
+                <li>Linea 1:"<b><code>&lt;!DOCTYPE html&gt;</code></b>": Define el documento como HTML5. <strong>¡Imprescindible!</strong></li>
+                <li>Linea 2:"<b><code>&lt;html&gt;</code></b>": La etiqueta raíz. <strong>¡Imprescindible!</strong></li>
+                <li>Linea 3:"<b><code>&lt;head&gt;</code></b>": Contiene metadatos no visibles. Dentro definen cosas como el titulo de la página o el favicon gracias a otras etiquetas "Meta". <strong>¡Imprescindible!</strong>
+                    <ul>
+                        <li>Linea 4: "<b><code>&lt;meta charset="UTF-8"&gt;</code></b>": Codificación de caracteres. <strong>¡Imprescindible!</strong></li>
+                        <li>Linea 5: bien"<b><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></b>": Configura la vista para dispositivos móviles. <strong>¡Imprescindible!</strong></li>
+                        <li>Linea 6: "<b><code>&lt;title&gt;</code></b>": Título de la pestaña del navegador.</li>
+                    </ul>
+                </li>
+                <li>Linea 7: "<b><code>&lt;body&gt;</code></b>": Contiene todo el contenido visible de la página.</li>
+            </ul>
+        <hr>
+        </section>
+
+        <section id="texto-html">
+            <h2>Cómo Agregar Texto y Estructurarlo</h2>
+            <p>Puedes agregar texto de diversas maneras, utilizando etiquetas semánticas:</p>
+            <ul>
+                <li><strong>Párrafos:</strong> <code>&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;</code></li>
+                <li><strong>Encabezados:</strong> <code>&lt;h1&gt;</code> al <code>&lt;h6&gt;</code></li>
+                <li><strong>Negrita:</strong> <code>&lt;strong&gt;Texto importante&lt;/strong&gt;</code> <strong>(semántico)</strong> o <code>&lt;b&gt;Texto en negrita&lt;/b&gt;</code> <b>(visual)</b>.</li>
+                <li><strong>Cursiva:</strong> <code>&lt;em&gt;Texto enfatizado&lt;/em&gt;</code> <em>(semántico)</em> o <code>&lt;i&gt;Texto en cursiva&lt;/i&gt;</code> <i>(visual)</i>.</li>
+                <li><strong>Salto de línea:</strong> <code>&lt;br&gt;</code> (no crea un nuevo párrafo).</li>
+                <li><strong>Línea horizontal:</strong> <code>&lt;hr&gt;</code> (separa temáticamente).</li>
+                <li><strong>Listas:</strong>
+                    <ul>
+                        <li>Desordenadas (viñetas): <code>&lt;ul&gt;&lt;li&gt;Elemento&lt;/li&gt;&lt;/ul&gt;</code></li>
+                    </ul>
+                    <ol>
+                        <li>Ordenadas (numeradas): <code>&lt;ol&gt;&lt;li&gt;Elemento&lt;/li&gt;&lt;/ol&gt;</code></li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
+        <hr>
+        <section id="quotes-html">
+            <h2>3. Cómo Agregar Citas (Quotes)</h2>
+            <p>HTML tiene etiquetas específicas para citar texto, mejorando la semántica de tu contenido:</p>
+            <h3>Citas en Bloque (<code>&lt;blockquote&gt;</code>)</h3>
+            <p>Para citas largas o bloques de texto que se extraen de otra fuente. Los navegadores suelen aplicar sangría.</p>
+            <blockquote>
+                <p>La vida es lo que pasa mientras estás ocupado haciendo otros planes.</p>
+                <footer>— <cite>John Lennon</cite></footer>
+            </blockquote>
+            <pre><code>
+&lt;blockquote cite="URL_de_la_fuente"&gt;
+    &lt;p&gt;Texto de la cita.&lt;/p&gt;
+    &lt;footer&gt;— &lt;cite&gt;Autor o Fuente&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+            </code></pre>
+
+            <h3>Citas en Línea (<code>&lt;q&gt;</code>)</h3>
+            <p>Para citas cortas dentro de un párrafo o una oración. Los navegadores pueden añadir comillas automáticamente.</p>
+            <p>Como dijo la célebre frase, <q>El conocimiento es poder</q>.</p>
+            <pre><code>
+&lt;p&gt;Como dijo la célebre frase, &lt;q cite="URL_de_la_fuente"&gt;El conocimiento es poder&lt;/q&gt;.&lt;/p&gt;
+            </code></pre>
+
+            <h3>Atribución de una Obra o Autor (<code>&lt;cite&gt;</code>)</h3>
+            <p>Usa <code>&lt;cite&gt;</code> para el título de una obra creativa (libro, película) o el nombre de un autor, no para el texto de la cita en sí.</p>
+            <p>Mi libro favorito es <cite>Cien años de soledad</cite>.</p>
+            <pre><code>
+&lt;p&gt;Mi libro favorito es &lt;cite&gt;Cien años de soledad&lt;/cite&gt;.&lt;/p&gt;
+            </code></pre>
+        </section>
+
+        <section id="subitems-html">
+            ---
+            <h2>4. Cómo Agregar Sub-ítems a una Tabla HTML</h2>
+            <p>Aunque no hay una etiqueta directa para "sub-ítems", puedes simularlos de estas maneras:</p>
+
+            <h3>Opción 1: Usando `rowspan`</h3>
+            <p>Cuando un ítem principal tiene varias características en columnas separadas.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Característica</th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="3"><strong>Laptop X</strong></td>
+                        <td>Procesador</td>
+                        <td>Intel Core i7</td>
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        <td>16 GB</td>
+                    </tr>
+                    <tr>
+                        <td>Almacenamiento</td>
+                        <td>512 GB SSD</td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre><code>
+&lt;td rowspan="3"&gt;&lt;strong&gt;Laptop X&lt;/strong&gt;&lt;/td&gt;
+&lt;!-- ...las siguientes 2 filas ya no necesitan la celda del producto ... --&gt;
+            </code></pre>
+
+            <h3>Opción 2: Anidando Listas en una Celda</h3>
+            <p>Si los "sub-ítems" son una lista de puntos o detalles dentro de una celda.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fase</th>
+                        <th>Sub-tareas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Planificación</td>
+                        <td>
+                            <ul>
+                                <li>Reunión inicial</li>
+                                <li>Análisis de requisitos</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre><code>
+&lt;td&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Elemento 1&lt;/li&gt;
+        &lt;li&gt;Elemento 2&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/td&gt;
+            </code></pre>
+
+            <h3>Opción 3: Usando Clases CSS para Estilos</h3>
+            <p>Para jerarquías visuales simples con sangría y otros estilos.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Categoría</th>
+                        <th>Artículo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="main-item">
+                        <td>Electrónica</td>
+                        <td>Total Electrónica</td>
+                    </tr>
+                    <tr>
+                        <td class="sub-item"></td>
+                        <td class="sub-item">Teléfonos móviles</td>
+                    </tr>
+                </tbody>
+            </table>
+            <pre><code>
+&lt;tr class="main-item"&gt;...&lt;/tr&gt;
+&lt;tr&gt;&lt;td class="sub-item"&gt;&lt;/td&gt;&lt;td class="sub-item"&gt;...&lt;/td&gt;&lt;/tr&gt;
+            </code></pre>
+            <p><em>(Esta opción funciona mejor si luego le añades CSS para darle estilo a las clases `main-item` y `sub-item`).</em></p>
+        </section>
+
+        <section id="codigo-html">
+            ---
+            <h2>5. Cómo Agregar Visualización de Código HTML</h2>
+            <p>Para mostrar código en tus páginas:</p>
+
+            <h3>Fragmentos de Código en Línea (<code>&lt;code&gt;</code>)</h3>
+            <p>Para indicar que un pequeño fragmento de texto es código. El navegador le da una fuente monoespaciada.</p>
+            <p>La etiqueta para un enlace es <code>&lt;a&gt;</code>.</p>
+            <pre><code>
+&lt;p&gt;La etiqueta para un enlace es &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+            </code></pre>
+
+            <h3>Bloques de Código Preformateado (<code>&lt;pre&gt;</code>)</h3>
+            <p>Mantiene los espacios, saltos de línea e indentación tal como los escribes. Ideal para bloques de código largos.</p>
+            <pre>
+function saludar(nombre) {
+    console.log("Hola, " + nombre + "!");
+}
+saludar("Mundo");
+            </pre>
+            <pre><code>
+&lt;pre&gt;
+function saludar(nombre) {
+    console.log("Hola, " + nombre + "!");
+}
+saludar("Mundo");
+&lt;/pre&gt;
+            </code></pre>
+
+            <h3>Combinación (<code>&lt;pre&gt;&lt;code&gt;</code>)</h3>
+            <p>La mejor práctica: <code>&lt;pre&gt;</code> mantiene el formato y <code>&lt;code&gt;</code> le da semántica de código. Recuerda usar entidades HTML para <code>&lt;</code> (`&amp;lt;`) y <code>&gt;</code> (`&amp;gt;`).</p>
+            <pre><code>
+&lt;pre&gt;&lt;code class="language-html"&gt;
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;Ejemplo&amp;lt;/title&amp;gt;
+&amp;lt;/head&amp;gt;
+&amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;Mi Página&amp;lt;/h1&amp;gt;
+&amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+            </code></pre>
+
+            <h3>Resaltado de Sintaxis (con JavaScript)</h3>
+            <p>Para colores y temas como en los editores de código (ej. Highlight.js o Prism.js). **Esto solo funciona si enlazas librerías JavaScript externas**, no es HTML puro. Para este ejemplo, solo se muestra el contenedor sin la funcionalidad de resaltado.</p>
+            <pre><code class="language-javascript">
+// Ejemplo de JavaScript con resaltado de sintaxis
+function calcularArea(radio) {
+    return Math.PI * radio * radio;
+}
+const pi = Math.PI;
+console.log(calcularArea(5));
+            </code></pre>
+        </section>
+
+        <section id="imprescindible-html">
+            ---
+            <h2>6. Lo Imprescindible del HTML Básico (Resumen)</h2>
+            <p>Para crear cualquier página web sencilla y bien estructurada, estos son los elementos y conceptos clave:</p>
+            <ul>
+                <li><strong>Estructura Fundamental:</strong> <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> (con `charset` y `viewport`), <code>&lt;title&gt;</code> y <code>&lt;body&gt;</code>.</li>
+                <li><strong>Contenido de Texto:</strong> <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> (encabezados), <code>&lt;p&gt;</code> (párrafos), <code>&lt;strong&gt;</code> (importancia), <code>&lt;em&gt;</code> (énfasis).</li>
+                <li><strong>Enlaces:</strong> <code>&lt;a href="..."&gt;</code>.</li>
+                <li><strong>Imágenes:</strong> <code>&lt;img src="..." alt="..."&gt;</code> (<code>alt</code> es vital).</li>
+                <li><strong>Listas:</strong> <code>&lt;ul&gt;</code>/<code>&lt;ol&gt;</code> con <code>&lt;li&gt;</code>.</li>
+                <li><strong>Etiquetas Semánticas (HTML5):</strong> <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>.</li>
+                <li><strong>Conceptos Clave:</strong> Etiquetas de apertura/cierre, atributos, etiquetas de cierre automático.</li>
+            </ul>
+        </section>
+    </main>
+
     <footer>
-        <p>&copy; 2025 NeTenebrae. Todos los derechos reservados.</p>
-        <p>Página creada con puro HTML.</p>
+        ---
+        <p>&copy; 2025 Guía HTML. Todos los derechos reservados. Creado para el aprendizaje.</p>
+        <p>Visita <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN Web Docs</a> para más información sobre HTML.</p>
     </footer>
+
 </body>
 </html>
