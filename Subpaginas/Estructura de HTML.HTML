@@ -23,22 +23,12 @@
                 <li><a href="">Tablas en HTML</a></li>
             </ul>
         </nav>
-    </header>
-    <hr>
-    <main>
-        <section id="indice">
-            <h2>¿Que es HTML?</h2>
-            <p>
-                Te comparto todo lo que he aprendido a lo largo de mis días estudiando en <a href="https://www.freeCodeCamp.org" target="_blank">freeCodeCamp.org</a>. <br>
-                La estructura básica y fundamental de un documento HTML se compone de un conjunto de etiquetas anidadas que definen tanto la información general 
-                del documento como el contenido visible para el usuario. Piensa en ella como el "esqueleto" sobre el cual construyes toda tu página web.
-            </p>
-            <img src="https://i.postimg.cc/85qbMLxj/Skeleton.webp" alt="">
-            <hr>
+        <hr>
         <nav>
             <h3>Indice</h3>
             <ul>
-                <li><a href="#estructura-html">Estructura HTML</a></li>
+                <li><a href="#HTML">¿Qué es HTML?</a></li>
+                <li><a href="#estructura">Estructura HTML</a></li>
                 <li><a href="#texto-html">Agregar Texto</a></li>
                 <li><a href="#quotes-html">Agregar Citas (Quotes)</a></li>
                 <li><a href="#subitems-html">Sub-ítems en Tablas</a></li>
@@ -46,14 +36,29 @@
                 <li><a href="#imprescindible-html">HTML Imprescindible</a></li>
             </ul>
         </nav>
+    </header>
+    <hr>
+    <main>
+        <section id="HTML">
+            <h2>¿Que es HTML?</h2>
+            <img src="https://i.postimg.cc/85qbMLxj/Skeleton.webp" alt="">
+            <p>
+                HTML son las siglas de <b>HyperText Markup Language</b> (Lenguaje de Marcado de Hipertexto). Es el lenguaje estándar utilizado para crear y estructurar el contenido de las páginas web.
+                <br>
+                <br>
+                Un documento HTML se compone de un conjunto de "<strong>elementos</strong>" grupados que definen tanto la información general del documento como el contenido visible para el usuario. 
+                Piensa en HTML como el "<strong>esqueleto</strong>" sobre el cual construyes toda una página web. No es un lenguaje que se encargue del diseño visual en sí (para eso está CSS), ni de la interactividad (JavaScript por acá), 
+                sino de organizar y estructurar la información. Sin embargo, ten presente que a día de hoy los 3 son comunmente usados para el desarrollo de una página web, siendo HTML el inicio de todo un recorrido para ser 
+                desarrollador FullStack.
+            </p>
         </section>
         <hr>    
-        <section id="estructura-html">
-            <h2></h2>
-            <p>Todo documento HTML comienza con un esqueleto básico para que el navegador lo interprete correctamente:</p>
+        <section id="estructura">
+            <h2>Estructura HTML</h2>
+            <p>Todo documento HTML comienza con un esqueleto básico compuesto por "<strong>elementos</strong>" para que el navegador los interprete de forma correcta, aquí vamos a desglozar una estructura básica de HTML:</p>
 
            <blockquote><pre><code>
-1 &lt;!DOCTYPE html&gt;
+1 <a href="#linea01">&lt;!DOCTYPE html&gt;</a>
 2 &lt;html lang="es"&gt;
 3 &lt;head&gt;
 4     &lt;meta charset="UTF-8"&gt;
@@ -69,44 +74,33 @@
 14 &lt;/body&gt;
 15 &lt;/html&gt;
             </code></pre></blockquote>
-
-                <!-- te darás cuentasa que hay un montón de caracteres especiales como "&al;" y entre otro. 
-                 No te preocupes que más adelante explicamos en detalles estas secciones -->
-            <ul>
-                <li>Linea 1:"<b><code>&lt;!DOCTYPE html&gt;</code></b>": Define el documento como HTML5. <strong>¡Imprescindible!</strong></li>
-                <li>Linea 2:"<b><code>&lt;html&gt;</code></b>": La etiqueta raíz. <strong>¡Imprescindible!</strong></li>
-                <li>Linea 3:"<b><code>&lt;head&gt;</code></b>": Contiene metadatos no visibles. Dentro definen cosas como el titulo de la página o el favicon gracias a otras etiquetas "Meta". <strong>¡Imprescindible!</strong>
-                    <ul>
-                        <li>Linea 4: "<b><code>&lt;meta charset="UTF-8"&gt;</code></b>": Codificación de caracteres. <strong>¡Imprescindible!</strong></li>
-                        <li>Linea 5: bien"<b><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></b>": Configura la vista para dispositivos móviles. <strong>¡Imprescindible!</strong></li>
-                        <li>Linea 6: "<b><code>&lt;title&gt;</code></b>": Título de la pestaña del navegador.</li>
-                    </ul>
-                </li>
-                <li>Linea 7: "<b><code>&lt;body&gt;</code></b>": Contiene todo el contenido visible de la página.</li>
-            </ul>
         <hr>
         </section>
 
         <section id="texto-html">
-            <h2>Cómo Agregar Texto y Estructurarlo</h2>
-            <p>Puedes agregar texto de diversas maneras, utilizando etiquetas semánticas:</p>
+            <h2 id="linea01">Linea 01. Etiqueta "&lt;!DOCTYPE html&gt;"</h2>
+            <p>
+                <strong>&lt;!DOCTYPE html&gt;</strong> es la declaración de tipo de documento para HTML. Es la primera línea que ves en casi todos los documentos HTML. Aunque parece una etiqueta HTML, técnicamente no lo es. Es una instrucción para el navegador web.
+            </p>
+            <h3>¿Para qué sirve?</h3>
+            <p>
+
+                Su propósito principal es decirle al navegador qué versión de HTML se está utilizando en el documento. Esto es crucial porque le indica al navegador cómo debe renderizar (mostrar) la página.
+
             <ul>
-                <li><strong>Párrafos:</strong> <code>&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;</code></li>
-                <li><strong>Encabezados:</strong> <code>&lt;h1&gt;</code> al <code>&lt;h6&gt;</code></li>
-                <li><strong>Negrita:</strong> <code>&lt;strong&gt;Texto importante&lt;/strong&gt;</code> <strong>(semántico)</strong> o <code>&lt;b&gt;Texto en negrita&lt;/b&gt;</code> <b>(visual)</b>.</li>
-                <li><strong>Cursiva:</strong> <code>&lt;em&gt;Texto enfatizado&lt;/em&gt;</code> <em>(semántico)</em> o <code>&lt;i&gt;Texto en cursiva&lt;/i&gt;</code> <i>(visual)</i>.</li>
-                <li><strong>Salto de línea:</strong> <code>&lt;br&gt;</code> (no crea un nuevo párrafo).</li>
-                <li><strong>Línea horizontal:</strong> <code>&lt;hr&gt;</code> (separa temáticamente).</li>
-                <li><strong>Listas:</strong>
-                    <ul>
-                        <li>Desordenadas (viñetas): <code>&lt;ul&gt;&lt;li&gt;Elemento&lt;/li&gt;&lt;/ul&gt;</code></li>
-                    </ul>
-                    <ol>
-                        <li>Ordenadas (numeradas): <code>&lt;ol&gt;&lt;li&gt;Elemento&lt;/li&gt;&lt;/ol&gt;</code></li>
-                    </ol>
-                </li>
-            </ul>
-        </section>
+                <li><strong>Modo Estándar (Standards Mode):</strong></li> 
+                    <p>
+                        Cuando el navegador ve &lt;!DOCTYPE html&gt;, sabe que debe renderizar la página en el "modo estándar", lo que significa que seguirá estrictamente las especificaciones de HTML5 y CSS. 
+                        Este es el modo moderno y el deseado.
+                    </p>
+                <li><strong>Modo Quirks (Quirks Mode):</strong></li> 
+                   <p> 
+                        Si la declaración &lt;!DOCTYPE html&gt; está ausente o es incorrecta, el navegador podría entrar en "modo quirks". En este modo, el navegador intenta imitar el comportamiento de navegadores antiguos para renderizar páginas creadas antes de que 
+                        los estándares web estuvieran bien definidos. Esto puede llevar a inconsistencias en el diseño y en la forma en que se ve tu página en diferentes navegadores, ya que el comportamiento del modo quirks varía.
+                    </p>
+            </ul>        </p>
+
+
         <hr>
         <section id="quotes-html">
             <h2>3. Cómo Agregar Citas (Quotes)</h2>
@@ -310,6 +304,24 @@ console.log(calcularArea(5));
         <p>&copy; 2025 Guía HTML. Todos los derechos reservados. Creado para el aprendizaje.</p>
         <p>Visita <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank">MDN Web Docs</a> para más información sobre HTML.</p>
     </footer>
+
+                <ul>
+                <li><strong>Párrafos:</strong> <code>&lt;p&gt;Este es un párrafo de texto.&lt;/p&gt;</code></li>
+                <li><strong>Encabezados:</strong> <code>&lt;h1&gt;</code> al <code>&lt;h6&gt;</code></li>
+                <li><strong>Negrita:</strong> <code>&lt;strong&gt;Texto importante&lt;/strong&gt;</code> <strong>(semántico)</strong> o <code>&lt;b&gt;Texto en negrita&lt;/b&gt;</code> <b>(visual)</b>.</li>
+                <li><strong>Cursiva:</strong> <code>&lt;em&gt;Texto enfatizado&lt;/em&gt;</code> <em>(semántico)</em> o <code>&lt;i&gt;Texto en cursiva&lt;/i&gt;</code> <i>(visual)</i>.</li>
+                <li><strong>Salto de línea:</strong> <code>&lt;br&gt;</code> (no crea un nuevo párrafo).</li>
+                <li><strong>Línea horizontal:</strong> <code>&lt;hr&gt;</code> (separa temáticamente).</li>
+                <li><strong>Listas:</strong>
+                    <ul>
+                        <li>Desordenadas (viñetas): <code>&lt;ul&gt;&lt;li&gt;Elemento&lt;/li&gt;&lt;/ul&gt;</code></li>
+                    </ul>
+                    <ol>
+                        <li>Ordenadas (numeradas): <code>&lt;ol&gt;&lt;li&gt;Elemento&lt;/li&gt;&lt;/ol&gt;</code></li>
+                    </ol>
+                </li>
+            </ul>
+        </section>
 
 </body>
 </html>
